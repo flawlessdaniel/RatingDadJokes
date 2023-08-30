@@ -1,0 +1,19 @@
+﻿<div class="card">
+    <div class="card-header">
+        <span class="badge bg-info">@TargetJoke.Type</span>
+        @TargetJoke.Setup
+    </div>
+    <div class="card-body">@TargetJoke.Punchline</div>
+    <div class="card-footer">
+        <div class="container mt-5">
+            <h5>Give a rating</h5>
+            <div class="rating-container">
+                <span class="star" style="cursor:pointer;" @onclick=@(async () => await SendRating(1))>&#9733;</span>
+                <span class="star" style="cursor:pointer;" @onclick=@(async () => await SendRating(2))>&#9733;</span>
+                <span class="star" style="cursor:pointer;" @onclick=@(async () => await SendRating(3))>&#9733;</span>
+                <span class="star" style="cursor:pointer;" @onclick=@(async () => await SendRating(4))>&#9733;</span>
+                <span class="star" style="cursor:pointer;" @onclick=@(async () => await SendRating(5))>&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>

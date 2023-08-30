@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Shared.Secre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Shared.Discovery", "RatingDadJokes.Shared.Discovery\RatingDadJokes.Shared.Discovery.csproj", "{67087D8E-A1A0-4189-AA26-770163A0D342}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Core", "RatingDadJokes.Core\RatingDadJokes.Core.csproj", "{F3A951CD-7E88-4A2E-BEF0-8CEE52BE8B40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{67087D8E-A1A0-4189-AA26-770163A0D342}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67087D8E-A1A0-4189-AA26-770163A0D342}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67087D8E-A1A0-4189-AA26-770163A0D342}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A951CD-7E88-4A2E-BEF0-8CEE52BE8B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A951CD-7E88-4A2E-BEF0-8CEE52BE8B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A951CD-7E88-4A2E-BEF0-8CEE52BE8B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A951CD-7E88-4A2E-BEF0-8CEE52BE8B40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

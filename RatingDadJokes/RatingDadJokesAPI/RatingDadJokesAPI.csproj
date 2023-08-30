@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RatingDadJokes.Core\RatingDadJokes.Core.csproj" />
     <ProjectReference Include="..\RatingDadJokes.Data.Service\RatingDadJokes.Data.Service.csproj" />
     <ProjectReference Include="..\RatingDadJokes.Shared.Discovery\RatingDadJokes.Shared.Discovery.csproj" />
     <ProjectReference Include="..\RatingDadJokes.Shared.Secrets\RatingDadJokes.Shared.Secrets.csproj" />
