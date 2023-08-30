@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  redis:
+    image: redis:6.0.7
+    container_name: redis
+    restart: always
+    volumes:
+      - redis_volume_data:/data
+    ports:
+      - 6379:6379
+  redis_insight:
+    image: redislabs/redisinsight:latest
+    container_name: redis_insight
+    restart: always
+    ports:
+      - 8001:8001
+    volumes:
+      - redis_insight_volume_data:/db
+  vault:
+    image: hashicorp/vault
+    container_name: vault
+    ports:
+      - 8200:8200
+    environment:
+      VAULT_ADDR: "http://127.0.0.1:8200"
+      # in production scenarios the token mechanisim for loggin will be forbidden,
+      # it cannot be in source control.
+      VAULT_TOKEN: "ratingdadjokes-token" # to be able to use the cli on dev
+      VAULT_DEV_ROOT_TOKEN_ID: "ratingdadjokes-token"
+  consul:
+    image: hashicorp/consul
+    container_name: consul
+    ports:
+        - 8500:8500 # this is the UI/API calls
+        - 8400:8400
+        - 8600:8600
+        - 8600:8600/udp
+volumes:
+  redis_volume_data:
+  redis_insight_volume_data:

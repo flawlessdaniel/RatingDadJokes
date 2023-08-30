@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RatingDadJokesAPI", "RatingDadJokesAPI\RatingDadJokesAPI.csproj", "{FDC1DCDF-AEA3-4BD1-A679-9FA18F88B64B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokesWeb", "RatingDadJokesWeb\RatingDadJokesWeb.csproj", "{321675B7-E7FC-4B69-84D5-FA9E801CDE42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Data", "RatingDadJokes.Data\RatingDadJokes.Data.csproj", "{9E509343-24F5-460F-A92A-2814D001922C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Data.Service", "RatingDadJokes.Data.Service\RatingDadJokes.Data.Service.csproj", "{83B0B888-2EB5-4F18-ABAE-F88205FCDFE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Shared.Secrets", "RatingDadJokes.Shared.Secrets\RatingDadJokes.Shared.Secrets.csproj", "{16367BAF-D0B9-48AB-8C78-4F22458F2BE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Shared.Discovery", "RatingDadJokes.Shared.Discovery\RatingDadJokes.Shared.Discovery.csproj", "{67087D8E-A1A0-4189-AA26-770163A0D342}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDC1DCDF-AEA3-4BD1-A679-9FA18F88B64B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC1DCDF-AEA3-4BD1-A679-9FA18F88B64B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC1DCDF-AEA3-4BD1-A679-9FA18F88B64B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC1DCDF-AEA3-4BD1-A679-9FA18F88B64B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{321675B7-E7FC-4B69-84D5-FA9E801CDE42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{321675B7-E7FC-4B69-84D5-FA9E801CDE42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{321675B7-E7FC-4B69-84D5-FA9E801CDE42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{321675B7-E7FC-4B69-84D5-FA9E801CDE42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E509343-24F5-460F-A92A-2814D001922C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E509343-24F5-460F-A92A-2814D001922C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E509343-24F5-460F-A92A-2814D001922C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E509343-24F5-460F-A92A-2814D001922C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B0B888-2EB5-4F18-ABAE-F88205FCDFE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B0B888-2EB5-4F18-ABAE-F88205FCDFE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B0B888-2EB5-4F18-ABAE-F88205FCDFE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B0B888-2EB5-4F18-ABAE-F88205FCDFE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16367BAF-D0B9-48AB-8C78-4F22458F2BE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16367BAF-D0B9-48AB-8C78-4F22458F2BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16367BAF-D0B9-48AB-8C78-4F22458F2BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16367BAF-D0B9-48AB-8C78-4F22458F2BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67087D8E-A1A0-4189-AA26-770163A0D342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67087D8E-A1A0-4189-AA26-770163A0D342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67087D8E-A1A0-4189-AA26-770163A0D342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67087D8E-A1A0-4189-AA26-770163A0D342}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BDC7DF8-F695-4AA6-B3FF-906E53C7DACB}
+	EndGlobalSection
+EndGlobal
