@@ -9,7 +9,6 @@ namespace RatingDadJokes.Shared.Secrets
     public interface ISecretManager
     {
         Task<T> Get<T>(string path) where T : new();
-        //Task<string> GetSimple(string path);
     }
 
     internal class VaultSecretManager : ISecretManager
@@ -33,16 +32,6 @@ namespace RatingDadJokes.Shared.Secrets
 
             return returnedData.ToObject<T>();
         }
-
-        //public async Task<string> GetSimple(string path)
-        //{
-        //    VaultClient client = new VaultClient(new VaultClientSettings(_vaultSettings.VaultUrl,
-        //        new TokenAuthMethodInfo(_vaultSettings.TokenApi)));
-
-        //    Secret<SecretData> kv2Secret = await client.V1.Secrets.KeyValue.V2
-        //        .ReadSecretAsync(path: path, mountPoint: "secret");
-        //    return kv2Secret.Data.Data.First().Value.ToString();
-        //}
 
         private string GetTokenFromEnvironmentVariable()
             => Environment.GetEnvironmentVariable("VAULT-TOKEN")

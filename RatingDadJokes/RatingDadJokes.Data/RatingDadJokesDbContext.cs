@@ -5,6 +5,8 @@ namespace RatingDadJokes.Data
 {
     public class RatingDadJokesDbContext : DbContext
     {
+        public RatingDadJokesDbContext() { }
+
         public RatingDadJokesDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
         {
             

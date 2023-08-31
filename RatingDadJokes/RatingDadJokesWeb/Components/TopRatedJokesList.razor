@@ -1,0 +1,14 @@
+﻿@inject HttpClient httpClient;
+
+@foreach(var joke in TopRatedJokes) {
+    <div class="card mt-2">
+        <div class="card-header">
+            <span class="badge bg-info">@joke.TargetJoke.Type</span>
+            @joke.TargetJoke.Setup
+        </div>
+        <div class="card-body">@joke.TargetJoke.Punchline</div>
+        <div class="card-footer">
+            Stars: @joke.RatingValue
+        </div>
+    </div>
+}

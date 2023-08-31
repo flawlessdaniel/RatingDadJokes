@@ -5,9 +5,9 @@ namespace RatingDadJokes.Data.Service
     public interface IRatingRepository
     {
         void AddJoke(Joke joke);
-        void AddRating(Joke joke, int  rating);
-        Task AddRatingAsync(Joke joke, int rating);
-        List<Joke> GetTopRatedJokes();
-        Task<List<Joke>> GetTopRatedJokesAsync();
+        void AddRating(Rating rating);
+        Task AddRatingAsync(Rating rating);
+        List<Rating> GetTopRatedJokes();
+        Task<List<Rating>> GetTopRatedJokesAsync();
     }
 }

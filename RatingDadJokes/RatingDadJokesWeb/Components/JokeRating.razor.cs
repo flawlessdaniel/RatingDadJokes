@@ -1,4 +1,5 @@
 ﻿using RatingDadJokes.Core;
+using System.Net.Http.Json;
 
 namespace RatingDadJokesWeb.Components
 {
@@ -7,15 +8,28 @@ namespace RatingDadJokesWeb.Components
         public int rating { get; set; }
         public Joke TargetJoke { get; set; }
 
-        protected override Task OnInitializedAsync()
+        protected override async Task OnInitializedAsync()
         {
-            TargetJoke = new Joke("123", "afasf", "gsdgsdgsd", "fsdf");
-            return Task.CompletedTask;
+            await GetRandomJoke();
+        }
+
+        private async Task GetRandomJoke()
+        {
+            var randomJoke = await httpClient.GetFromJsonAsync<Joke>("/jokes/random");
+            if (randomJoke != null)
+            {
+                TargetJoke = new Joke(
+                randomJoke.Id,
+                randomJoke.Setup,
+                randomJoke.Punchline,
+                randomJoke.Type);
+            }
         }
 
         public async Task SendRating(int rating)
         {
-            //TODO Send rating to the api
+            await httpClient.PostAsJsonAsync("/jokes/rate", new Rating(TargetJoke, rating));
+            await GetRandomJoke();
         }
     }
 }

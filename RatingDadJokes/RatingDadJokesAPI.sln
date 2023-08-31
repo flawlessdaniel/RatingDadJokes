@@ -17,6 +17,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Shared.Disco
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Core", "RatingDadJokes.Core\RatingDadJokes.Core.csproj", "{F3A951CD-7E88-4A2E-BEF0-8CEE52BE8B40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.ExternalData", "RatingDadJokes.ExternalData\RatingDadJokes.ExternalData.csproj", "{C3BD2D99-3B65-47D8-9ABB-645CD300F821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.ExternalData.DadJokesIo", "RatingDadJokes.ExternalData.DadJokesIo\RatingDadJokes.ExternalData.DadJokesIo.csproj", "{0E8F1A7B-1CBE-49EB-9737-73B39897F96F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Cache", "RatingDadJokes.Cache\RatingDadJokes.Cache.csproj", "{652C2348-470D-4CAE-98D2-45084137C3EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Cache.Redis", "RatingDadJokes.Cache.Redis\RatingDadJokes.Cache.Redis.csproj", "{23CEA13B-B20F-4920-B3F1-398947E1DA08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingDadJokes.Test.Data.Service", "RatingDadJokes.Test.Data.Service\RatingDadJokes.Test.Data.Service.csproj", "{867FD5B3-6B01-49E9-9DD8-A6B549EDE217}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +61,26 @@ Global
 		{F3A951CD-7E88-4A2E-BEF0-8CEE52BE8B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3A951CD-7E88-4A2E-BEF0-8CEE52BE8B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3A951CD-7E88-4A2E-BEF0-8CEE52BE8B40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3BD2D99-3B65-47D8-9ABB-645CD300F821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3BD2D99-3B65-47D8-9ABB-645CD300F821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3BD2D99-3B65-47D8-9ABB-645CD300F821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3BD2D99-3B65-47D8-9ABB-645CD300F821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E8F1A7B-1CBE-49EB-9737-73B39897F96F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E8F1A7B-1CBE-49EB-9737-73B39897F96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E8F1A7B-1CBE-49EB-9737-73B39897F96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E8F1A7B-1CBE-49EB-9737-73B39897F96F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{652C2348-470D-4CAE-98D2-45084137C3EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{652C2348-470D-4CAE-98D2-45084137C3EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{652C2348-470D-4CAE-98D2-45084137C3EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{652C2348-470D-4CAE-98D2-45084137C3EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23CEA13B-B20F-4920-B3F1-398947E1DA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23CEA13B-B20F-4920-B3F1-398947E1DA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23CEA13B-B20F-4920-B3F1-398947E1DA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23CEA13B-B20F-4920-B3F1-398947E1DA08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867FD5B3-6B01-49E9-9DD8-A6B549EDE217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867FD5B3-6B01-49E9-9DD8-A6B549EDE217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867FD5B3-6B01-49E9-9DD8-A6B549EDE217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867FD5B3-6B01-49E9-9DD8-A6B549EDE217}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

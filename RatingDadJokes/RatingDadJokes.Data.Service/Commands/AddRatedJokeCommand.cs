@@ -5,20 +5,52 @@ namespace RatingDadJokes.Data.Service.Commands
 {
     public interface IAddRatedJokeCommand
     {
-        public void AddRatedJokeCommand(AddRatedJokeRequest request);
-        public Task AddRatedJokeCommandAsync(AddRatedJokeRequest request);
+        public void AddRatedJoke(AddRatedJokeRequest request);
+        public Task AddRatedJokeAsync(AddRatedJokeRequest request);
     }
 
     public class AddRatedJokeCommand : IAddRatedJokeCommand
     {
-        public Task AddRatedJokeCommandAsync(AddRatedJokeRequest request)
+        private readonly IRatingRepository _repository;
+        public AddRatedJokeCommand(IRatingRepository repository)
         {
-            throw new NotImplementedException();
+            _repository = repository;
         }
 
-        void IAddRatedJokeCommand.AddRatedJokeCommand(AddRatedJokeRequest request)
+        public async Task AddRatedJokeAsync(AddRatedJokeRequest request)
         {
-            throw new NotImplementedException();
+            if (request.Rating < 5) return;
+
+            await _repository.AddRatingAsync(new Rating()
+            {
+                Id = Guid.NewGuid().ToString(),
+                Joke = new Joke()
+                {
+                    Id = request.Id,
+                    Setup = request.Setup,
+                    Punchline = request.Punchline,
+                    Type = request.Type
+                },
+                Stars = request.Rating
+            });
+        }
+
+        public void AddRatedJoke(AddRatedJokeRequest request)
+        {
+            if (request.Rating < 5) return;
+
+            _repository.AddRating(new Rating()
+            {
+                Id = Guid.NewGuid().ToString(),
+                Joke = new Joke()
+                {
+                    Id = request.Id,
+                    Setup = request.Setup,
+                    Punchline = request.Punchline,
+                    Type = request.Type
+                },
+                Stars = request.Rating
+            });
         }
     }
 }

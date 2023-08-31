@@ -1,15 +1,18 @@
-﻿using RatingDadJokes.Data.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using RatingDadJokes.Data.Model;
 
 namespace RatingDadJokes.Data.Service
 {
     public class RatingRepository : IRatingRepository
     {
         private readonly RatingDadJokesDbContext _dbContext;
+
+        public RatingRepository() 
+        {
+            _dbContext = new RatingDadJokesDbContext();
+            _dbContext.Ratings.Add(new());
+        }
+
         public RatingRepository(RatingDadJokesDbContext dbContext)
         {
             _dbContext = dbContext;
@@ -21,24 +24,26 @@ namespace RatingDadJokes.Data.Service
             _dbContext.SaveChanges();
         }
 
-        public void AddRating(Joke joke, int rating)
+        public void AddRating(Rating rating)
         {
-            throw new NotImplementedException();
+            _dbContext.Ratings.Add(rating);
+            _dbContext.SaveChanges();
         }
 
-        public Task AddRatingAsync(Joke joke, int rating)
+        public async Task AddRatingAsync(Rating rating)
         {
-            throw new NotImplementedException();
+            _dbContext.Ratings.Add(rating);
+            await _dbContext.SaveChangesAsync();
         }
 
-        public List<Joke> GetTopRatedJokes()
+        public List<Rating> GetTopRatedJokes()
         {
-            throw new NotImplementedException();
+            return _dbContext.Ratings.Include("Joke").ToList();
         }
 
-        public Task<List<Joke>> GetTopRatedJokesAsync()
+        public Task<List<Rating>> GetTopRatedJokesAsync()
         {
-            throw new NotImplementedException();
+            return _dbContext.Ratings.Include("Joke").ToListAsync();
         }
     }
 }

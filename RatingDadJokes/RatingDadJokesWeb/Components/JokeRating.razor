@@ -1,4 +1,7 @@
-﻿<div class="card">
+﻿@inject HttpClient httpClient;
+@inject NavigationManager navigationManager;
+
+<div class="card">
     <div class="card-header">
         <span class="badge bg-info">@TargetJoke.Type</span>
         @TargetJoke.Setup
