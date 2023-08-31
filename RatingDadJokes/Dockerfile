@@ -8,6 +8,15 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["RatingDadJokesAPI/RatingDadJokesAPI.csproj", "RatingDadJokesAPI/"]
+COPY ["RatingDadJokes.Cache.Redis/RatingDadJokes.Cache.Redis.csproj", "RatingDadJokes.Cache.Redis/"]
+COPY ["RatingDadJokes.Cache/RatingDadJokes.Cache.csproj", "RatingDadJokes.Cache/"]
+COPY ["RatingDadJokes.Core/RatingDadJokes.Core.csproj", "RatingDadJokes.Core/"]
+COPY ["RatingDadJokes.Data.Service/RatingDadJokes.Data.Service.csproj", "RatingDadJokes.Data.Service/"]
+COPY ["RatingDadJokes.Data/RatingDadJokes.Data.csproj", "RatingDadJokes.Data/"]
+COPY ["RatingDadJokes.ExternalData.DadJokesIo/RatingDadJokes.ExternalData.DadJokesIo.csproj", "RatingDadJokes.ExternalData.DadJokesIo/"]
+COPY ["RatingDadJokes.ExternalData/RatingDadJokes.ExternalData.csproj", "RatingDadJokes.ExternalData/"]
+COPY ["RatingDadJokes.Shared.Discovery/RatingDadJokes.Shared.Discovery.csproj", "RatingDadJokes.Shared.Discovery/"]
+COPY ["RatingDadJokes.Shared.Secrets/RatingDadJokes.Shared.Secrets.csproj", "RatingDadJokes.Shared.Secrets/"]
 RUN dotnet restore "RatingDadJokesAPI/RatingDadJokesAPI.csproj"
 COPY . .
 WORKDIR "/src/RatingDadJokesAPI"
